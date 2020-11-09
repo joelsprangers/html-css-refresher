@@ -1,0 +1,95 @@
+*{
+    margin-top: 0;
+    font-family: sans-serif;
+    margin-bottom: 0;
+    font-weight: lighter;
+}
+
+.member-container{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.person-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    margin-right: 20px;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+}
+
+.person-details{
+    grid-column: 1 / 12;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.person-details p{
+    margin-top: 5px;
+    color:lightgrey
+}
+
+.person-picture {
+    display: block;
+    height: 40px;
+    padding: 20px;
+    grid-column: 12 / 13;
+    grid-row: 1 / 2;
+}
+
+.message{
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.button-choice{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+    padding: 10px;
+    
+}
+
+[type="button"]{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+[value$="ve"]{
+    width: 50%;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: unset;
+    border: solid 2px rgb(0, 189, 55);
+    color:rgb(0, 189, 55);
+    border-right: unset;
+}
+
+[value^="De"]{
+    width: 50%;
+    background-color: unset;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;    border: solid 2px red;
+    color:red
+}
+
+@media (max-width:650px){
+    .member-container{
+        flex-wrap: wrap;
+    }
+}
+
+
+
